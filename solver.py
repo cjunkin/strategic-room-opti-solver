@@ -5,9 +5,10 @@ import sys
 from os.path import basename, normpath
 import glob
 import copy
+import multiprocessing
 
 
-def solve(G, s):
+def solve(G, s, output_path):
     """
     Args:
         G: networkx.Graph
@@ -21,11 +22,16 @@ def solve(G, s):
     cool.solve()
     solution = cool.best
     rooms = len(solution)
-    return convert_dictionary(solution), rooms
+    D, k = convert_dictionary(solution), rooms
+    assert is_valid_solution(D, G, s, k)
+    happiness = calculate_happiness(D, G)
+    print("Total Happiness: {}".format(calculate_happiness(D, G)))
+    write_output_file(D, output_path)
 
 class BranchAndBoundSolver():
 
     def __init__(self, G, s):
+        print("new graph being worked on")
         self.G = G
         self.s = s
         self.max = -999
@@ -94,12 +100,10 @@ class BranchAndBoundSolver():
 
 #For testing a folder of inputs to create a folder of outputs, you can use glob (need to import it)
 if __name__ == '__main__':
-    inputs = glob.glob('inputs/small/*')
+    inputs = glob.glob('inputs/medium/*')
     for input_path in inputs:
-        output_path = 'outputs/' + basename(normpath(input_path))[:-3] + '.out'
+        output_path = 'outputs/medium/' + basename(normpath(input_path))[:-3] + '.out'
         G, s = read_input_file(input_path)
-        D, k = solve(G, s)
-        assert is_valid_solution(D, G, s, k)
-        happiness = calculate_happiness(D, G)
-        print("Total Happiness: {}".format(calculate_happiness(D, G)))
-        write_output_file(D, output_path)
+        t = multiprocessing.Process(target=solve, args=(G, s, output_path))
+        t.start()
+
