@@ -4,6 +4,7 @@ from utils import is_valid_solution, calculate_happiness, convert_dictionary
 import sys
 from os.path import basename, normpath
 import glob
+import copy
 
 
 def solve(G, s):
@@ -16,10 +17,11 @@ def solve(G, s):
         k: Number of breakout rooms
     """
     #initialize the set of subproblems
-    problems = []
     cool = BranchAndBoundSolver(G, s)
-    return cool.solve()
-
+    cool.solve()
+    solution = cool.best
+    rooms = len(solution)
+    return convert_dictionary(solution), rooms
 
 class BranchAndBoundSolver():
 
@@ -28,78 +30,76 @@ class BranchAndBoundSolver():
         self.s = s
         self.max = -999
         self.best = {}
-        self.best_rooms = 0
         self.num_students = nx.number_of_nodes(G)
-        self.rooms = 1
 
-    def add_room(self):
-        self.rooms += 1
 
-    def get_stress_limit(self):
-        return self.s/self.rooms
 
-    def solve(self):
-        while self.rooms < 5:
-            self.solve_helper()
-            self.rooms += 1
-        return self.best, self.best_rooms
 
     #runs the main solving loop in a branch and bound fashion
-    def solve_helper(self):
+    def solve(self):
         sub_problems = [{}]
         while sub_problems:
             #next items assignments to iterate through
             branches = self.expand(sub_problems.pop())
+
             for br in branches:
                 if self.valid_stress(br):
-                    if len(br) == self.num_students:
+                    if self.students_in(br) == self.num_students:
                         self.update_best(br)
                     else:
                         sub_problems.append(br)
 
     # return subproblems but with the next student added to each room
     def expand(self, br):
-        student = len(br)
+        student = self.students_in(br)
         # creates a branch of the search tree for each possible addition
-        branches = [br.copy() for i in range(self.rooms)]
+        branches = [copy.deepcopy(br) for i in range(len(br) + 1)]
 
-        # adds student to room
-        for i in range(len(branches)):
-            branches[i][student] = i
+        # adds a branch in which a student gets added to each room
+        for i in range(len(br)):
+            branches[i][i].append(student)
 
+        #creates a new room for the student n the final branch
+        branches[len(br)][len(br)] = [student]
         return branches
 
+    def students_in(self, br):
+        stus = 0
+        for room, kids in br.items():
+            stus += len(kids)
+        return stus
+
     def valid_stress(self, p):
-        return is_valid_solution(p, self.G, self.s, self.rooms)
+        return is_valid_solution(convert_dictionary(p), self.G, self.s, len(p))
 
     def update_best(self, p):
-        h = calculate_happiness(p, self.G)
+        h = calculate_happiness(convert_dictionary(p), self.G)
         if h > self.max:
+            print(h)
             self.max = h
             self.best = p
-            self.best_rooms = self.rooms
+
 
 # Here's an example of how to run your solver.
 
 # Usage: python3 solver.py test.in
 
+#if __name__ == '__main__':
+ #   assert len(sys.argv) == 2
+  #  path = sys.argv[1]
+  #  G, s = read_input_file(path)
+  #  D, k = solve(G, s)
+  #  assert is_valid_solution(D, G, s, k)
+# print("Total Happiness: {}".format(calculate_happiness(D, G)))
+
+
+#For testing a folder of inputs to create a folder of outputs, you can use glob (need to import it)
 if __name__ == '__main__':
-    assert len(sys.argv) == 2
-    path = sys.argv[1]
-    G, s = read_input_file(path)
-    D, k = solve(G, s)
-    assert is_valid_solution(D, G, s, k)
-    print("Total Happiness: {}".format(calculate_happiness(D, G)))
-     #write_output_file(D, 'outputs/small-1.out')
-
-
-# For testing a folder of inputs to create a folder of outputs, you can use glob (need to import it)
-# if __name__ == '__main__':
-#     inputs = glob.glob('inputs/*')
-#     for input_path in inputs:
-#         output_path = 'outputs/' + basename(normpath(input_path))[:-3] + '.out'
-#         G, s = read_input_file(input_path)
-#         D, k = solve(G, s)
-#         assert is_valid_solution(D, G, s, k)
-#         happiness = calculate_happiness(D, G)
-#         write_output_file(D, output_path)
+    inputs = glob.glob('inputs/small/*')
+    for input_path in inputs:
+        output_path = 'outputs/' + basename(normpath(input_path))[:-3] + '.out'
+        G, s = read_input_file(input_path)
+        D, k = solve(G, s)
+        assert is_valid_solution(D, G, s, k)
+        happiness = calculate_happiness(D, G)
+        write_output_file(D, output_path)
