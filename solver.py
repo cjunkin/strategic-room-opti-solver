@@ -75,7 +75,6 @@ class BranchAndBoundSolver():
     def update_best(self, p):
         h = calculate_happiness(convert_dictionary(p), self.G)
         if h > self.max:
-            print(h)
             self.max = h
             self.best = p
 
@@ -102,4 +101,5 @@ if __name__ == '__main__':
         D, k = solve(G, s)
         assert is_valid_solution(D, G, s, k)
         happiness = calculate_happiness(D, G)
+        print("Total Happiness: {}".format(calculate_happiness(D, G)))
         write_output_file(D, output_path)
