@@ -1,0 +1,352 @@
+new graph being worked on
+Total Happiness: 74.0
+Process Process-85:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-175.out'
+new graph being worked on
+Total Happiness: 222.9
+Process Process-33:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-128.out'
+new graph being worked on
+Total Happiness: 903.3249999999999
+Process Process-78:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-169.out'
+new graph being worked on
+Total Happiness: 310.87
+Process Process-84:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-174.out'
+new graph being worked on
+Total Happiness: 363.359
+Process Process-75:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-166.out'
+new graph being worked on
+Total Happiness: 324.584
+Process Process-12:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-109.out'
+new graph being worked on
+Total Happiness: 322.991
+Process Process-37:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-131.out'
+new graph being worked on
+Total Happiness: 431.131
+Process Process-169:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-34.out'
+new graph being worked on
+Total Happiness: 368.35999999999996
+Process Process-152:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-237.out'
+new graph being worked on
+Total Happiness: 64.77
+Process Process-88:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-178.out'
+new graph being worked on
+Total Happiness: 64.77
+Process Process-98:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-187.out'
+new graph being worked on
+Total Happiness: 781.2330000000001
+Process Process-188:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-51.out'
+new graph being worked on
+Total Happiness: 702.736
+Process Process-221:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-81.out'
+new graph being worked on
+Total Happiness: 169.05
+Process Process-16:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-112.out'
+new graph being worked on
+Total Happiness: 409.69
+Process Process-231:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-90.out'
+new graph being worked on
+Total Happiness: 267.105
+Process Process-191:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-54.out'
+new graph being worked on
+Total Happiness: 206.767
+Process Process-76:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-167.out'
+new graph being worked on
+Total Happiness: 1513.2030000000002
+Process Process-216:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-77.out'
+new graph being worked on
+Total Happiness: 1031.4859999999999
+Process Process-148:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-233.out'
+new graph being worked on
+Total Happiness: 543.8009999999999
+Process Process-43:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-137.out'
+new graph being worked on
+Total Happiness: 425.418
+Process Process-101:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-19.out'
+new graph being worked on
+Total Happiness: 517.4219999999999
+Process Process-17:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-113.out'
+new graph being worked on
+Total Happiness: 1107.703
+Process Process-57:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-15.out'
+new graph being worked on
+Total Happiness: 389.91599999999994
+Process Process-208:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-7.out'
+new graph being worked on
+Total Happiness: 587.443
+Process Process-28:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-123.out'
+new graph being worked on
+Total Happiness: 76.0
+Process Process-65:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "solver.py", line 29, in solve
+    write_output_file(D, output_path)
+  File "/home/cc/cs170/fl20/class/cs170-aen/CS170_Project/parse.py", line 122, in write_output_file
+    fo = open(path, "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/medium/medium-157.out'
+new graph being worked on
+Total Happiness: 296.799
+new graph being worked on
+Total Happiness: 700.0
+new graph being worked on
+Total Happiness: 693.6
+new graph being worked on
+Total Happiness: 184.0
+new graph being worked on
+Total Happiness: 673.226
+new graph being worked on
+Total Happiness: 841.739
+new graph being worked on
+Total Happiness: 99.78099999999999
