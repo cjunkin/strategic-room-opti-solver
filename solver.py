@@ -23,10 +23,13 @@ def solve(G, s, output_path):
     solution = cool.best
     rooms = len(solution)
     D, k = convert_dictionary(solution), rooms
-    assert is_valid_solution(D, G, s, k)
-    happiness = calculate_happiness(D, G)
-    print("Total Happiness: {}".format(calculate_happiness(D, G)))
-    write_output_file(D, output_path)
+    if rooms != 0:
+        assert is_valid_solution(D, G, s, k)
+        happiness = calculate_happiness(D, G)
+        print("Total Happiness: {}".format(calculate_happiness(D, G)))
+        write_output_file(D, output_path)
+    else:
+        print("Could not solve: {}".format(output_path))
 
 class BranchAndBoundSolver():
 
@@ -59,14 +62,17 @@ class BranchAndBoundSolver():
     def expand(self, br):
         student = self.students_in(br)
         # creates a branch of the search tree for each possible addition
-        branches = [copy.deepcopy(br) for i in range(len(br) + 1)]
+        branches = [copy.deepcopy(br) for i in range(len(br))]
 
         # adds a branch in which a student gets added to each room
         for i in range(len(br)):
             branches[i][i].append(student)
 
         #creates a new room for the student n the final branch
-        branches[len(br)][len(br)] = [student]
+        if len(br) < 5:
+            branches.append(copy.deepcopy(br))
+            branches[len(br)][len(br)] = [student]
+
         return branches
 
     def students_in(self, br):
@@ -100,10 +106,8 @@ class BranchAndBoundSolver():
 
 #For testing a folder of inputs to create a folder of outputs, you can use glob (need to import it)
 if __name__ == '__main__':
-    inputs = glob.glob('inputs/medium/*')
+    inputs = glob.glob('inputs/Medium1/*')
     for input_path in inputs:
         output_path = 'outputs/medium/' + basename(normpath(input_path))[:-3] + '.out'
         G, s = read_input_file(input_path)
-        t = multiprocessing.Process(target=solve, args=(G, s, output_path))
-        t.start()
-
+        solve(G,s, output_path)
