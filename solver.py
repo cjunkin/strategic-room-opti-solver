@@ -49,8 +49,7 @@ class GreedySolver():
             self.rooms.append([student])
 
     def merge(self, roomies):
-        print("pre merge: {}".format(self.rooms))
-        print("merging: {}".format(roomies))
+
 
         main_room = roomies[0]
         for i in range(1, len(roomies)):
@@ -59,7 +58,6 @@ class GreedySolver():
         for i in reversed(range(1, len(roomies))):
             self.rooms.pop(roomies[i])
 
-        print("merged: {}".format(self.rooms))
 
     #add memoization maybe
     #passes two rooms in, returns the value of merging them or -1 if merge would be invalid
@@ -80,13 +78,12 @@ class GreedySolver():
 
            return ((happy_gain * happy_gain) / max(stress_gain, 1))
        else:
-           return -1
+           return -999
 
 
     def solve(self):
         while True:
 
-            print(self.rooms)
             roomies, val = self.find_merge()
             if val <= 0:
                 return
@@ -118,7 +115,7 @@ class GreedySolver():
 
 
                     for l in range(k + 1, len(self.rooms)):
-                        merge.append(self.rooms[k])
+                        merge.append(self.rooms[l])
                         val = self.check_merge(merge)
                         if val > best[1]:
 
@@ -131,7 +128,6 @@ class GreedySolver():
                 merge.pop()
 
             merge.pop()
-        print("best merge: {} ".format(best))
         return best
 
 class BranchAndBoundSolver():
@@ -209,7 +205,7 @@ if __name__ == '__main__':
     D, k = convert_dictionary(convert_list(solution)), rooms
     assert is_valid_solution(D, G, s, k)
     happiness = calculate_happiness(D, G)
-    print("Total Happiness: {}".format(calculate_happiness(D, G)))
+    print("Total Happiness: {}".format(happiness))
 
 
 #For testing a folder of inputs to create a folder of outputs, you can use glob (need to import it)
