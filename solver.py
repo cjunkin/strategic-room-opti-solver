@@ -5,10 +5,12 @@ import sys
 from os.path import basename, normpath
 import glob
 import copy
-import multiprocessing
+import multiprocessing as mp
 
 
-def solve(G, s, output_path):
+num_running = 0
+
+def solve(input_path):
     """
     Args:
         G: networkx.Graph
@@ -18,6 +20,7 @@ def solve(G, s, output_path):
         k: Number of breakout rooms
     """
     #initialize the set of subproblems
+    G,s = read_input_file(input_path)
     cool = BranchAndBoundSolver(G, s)
     cool.solve()
     solution = cool.best
@@ -27,7 +30,7 @@ def solve(G, s, output_path):
         assert is_valid_solution(D, G, s, k)
         happiness = calculate_happiness(D, G)
         print("Total Happiness: {}".format(calculate_happiness(D, G)))
-        write_output_file(D, output_path)
+        write_output_file(D, output_path(input_path))
     else:
         print("Could not solve: {}".format(output_path))
 
@@ -103,11 +106,12 @@ class BranchAndBoundSolver():
   #  assert is_valid_solution(D, G, s, k)
 # print("Total Happiness: {}".format(calculate_happiness(D, G)))
 
-
+def output_path(input_path):
+    return 'outputs/large/' + basename(normpath(input_path))[:-3] + '.out'
 #For testing a folder of inputs to create a folder of outputs, you can use glob (need to import it)
 if __name__ == '__main__':
-    inputs = glob.glob('inputs/Medium1/*')
-    for input_path in inputs:
-        output_path = 'outputs/medium/' + basename(normpath(input_path))[:-3] + '.out'
-        G, s = read_input_file(input_path)
-        solve(G,s, output_path)
+    inputs = glob.glob('inputs/medium2/*')
+    num_proccesses = mp.cpu_count()  
+    pool = mp.Pool(num_proccesses)
+    pool.map(solve, [input_path  for input_path in inputs]) 
+
