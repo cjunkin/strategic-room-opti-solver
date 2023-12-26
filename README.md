@@ -1,6 +1,7 @@
 # OptiRoom
 **An efficient algorithmic approach to optimizing student room assignments based on happiness and stress metrics**
 
+## Summary
 OptiRoom is an advanced algorithmic solution designed to optimize student room assignments by balancing key metrics of happiness and stress. This project implements sophisticated algorithms to generate input data and solve complex room assignment problems efficiently. The input generation module randomizes happiness and stress values for each student pair and assigns them to rooms, ensuring no room exceeds a predefined stress budget. For solving the optimization problem, the project employs a dual approach: a branch and bound search algorithm for small datasets, ensuring accuracy, and a more pragmatic, time-efficient greedy algorithm for medium and large datasets. The primary objective is to maximize student well-being in room assignments, considering the intricate balance between individual preferences and overall group dynamics. The EliteRoomOpti-Engine demonstrates a novel approach in educational environment management, providing a template for future innovations in optimizing living and learning spaces.
 
 **Key Features:**
